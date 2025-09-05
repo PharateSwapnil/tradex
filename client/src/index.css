@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Custom color scheme for StockGuru */
+  --primary: hsl(221, 39%, 11%); /* #1E293B */
+  --secondary: hsl(222, 84%, 5%); /* #0F172A */
+  --accent-green: hsl(158, 64%, 52%); /* #10B981 */
+  --accent-red: hsl(0, 84%, 60%); /* #EF4444 */
+  --accent-blue: hsl(217, 91%, 60%); /* #3B82F6 */
+  
+  /* Standard design system colors */
+  --background: hsl(222, 84%, 5%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(221, 39%, 11%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(222, 84%, 5%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 32%, 17%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --accent: hsl(217, 32%, 17%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 32%, 17%);
+  --input: hsl(217, 32%, 17%);
+  --ring: hsl(217, 91%, 60%);
+  --chart-1: hsl(217, 91%, 60%);
+  --chart-2: hsl(158, 64%, 52%);
+  --chart-3: hsl(43, 96%, 56%);
+  --chart-4: hsl(142, 76%, 36%);
+  --chart-5: hsl(346, 87%, 43%);
+  --sidebar: hsl(221, 39%, 11%);
+  --sidebar-foreground: hsl(210, 40%, 98%);
+  --sidebar-primary: hsl(217, 91%, 60%);
+  --sidebar-primary-foreground: hsl(210, 40%, 98%);
+  --sidebar-accent: hsl(217, 32%, 17%);
+  --sidebar-accent-foreground: hsl(217, 91%, 60%);
+  --sidebar-border: hsl(217, 32%, 17%);
+  --sidebar-ring: hsl(217, 91%, 60%);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(222, 84%, 5%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(221, 39%, 11%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(222, 84%, 5%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(221, 39%, 11%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(222, 84%, 5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 32%, 17%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --accent: hsl(217, 32%, 17%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 32%, 17%);
+  --input: hsl(217, 32%, 17%);
+  --ring: hsl(217, 91%, 60%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--primary));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--accent-blue));
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--accent-blue) / 0.8);
+  }
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  
+  .bg-secondary {
+    background-color: var(--secondary);
+  }
+  
+  .text-accent-green {
+    color: var(--accent-green);
+  }
+  
+  .text-accent-red {
+    color: var(--accent-red);
+  }
+  
+  .text-accent-blue {
+    color: var(--accent-blue);
+  }
+  
+  .bg-accent-green {
+    background-color: var(--accent-green);
+  }
+  
+  .bg-accent-red {
+    background-color: var(--accent-red);
+  }
+  
+  .bg-accent-blue {
+    background-color: var(--accent-blue);
+  }
+  
+  .border-accent-green {
+    border-color: var(--accent-green);
+  }
+  
+  .border-accent-red {
+    border-color: var(--accent-red);
+  }
+  
+  .border-accent-blue {
+    border-color: var(--accent-blue);
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
